@@ -21,7 +21,7 @@ Webapp to simulate the traffic synchronization (6th sem project)
 
 ### Login
 - flask asks to login
-- for now just access by email=`sss@sss.com` and password=`sss` (already registered user)
+<!-- - for now just access by email=`sss@sss.com` and password=`sss` (already registered user) -->
 
 
 
