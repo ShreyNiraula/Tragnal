@@ -1,0 +1,71 @@
+{% extends "w3_base.html" %}
+    {% block heading %}
+    {% if title %}
+        <title>Traffic Control Center- {{ title }}</title>
+    {% else %}
+        <title>Traffic Control Center</title>
+    {% endif %}
+    {% endblock %}
+
+
+
+{% block content %}
+<style>
+
+    .card-img-top{
+    opacity:0.5;
+    }
+    .card-img-top:hover{
+    opacity:1;
+    }
+</style>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" >
+    <h2 class="w3-text-light-grey">Junctions</h2>
+      <p>Click on Junction You want to See!</p>
+  <!-- The Team -->
+  <div class="w3-row-padding ">
+    <div class="w3-col m4 w3-margin-bottom">
+
+      <div class="card" style="margin-right: 0px;">
+	       <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Koteshwor/koteshwor_thumbnail.png')}}" alt="Koteshwor Chwok">
+	          <div class="card-body">
+	            <h5 class="card-title w3-text-black">Koteshwor Junction</h5>
+	            <p class="card-text">Jump to Koteshwor Junction</p>
+	            <a href="{{ url_for('koteshwor')}}" class="btn btn-primary">Koteshwor</a>
+	          </div>
+	    </div>
+    </div>
+    <!-- end for koteshwor-->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="card" style="margin-right: 0px;">
+          <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Jadibuti/jadibuti_thumbnail.png')}}" alt="Jadibuti Chwok">
+          <div class="card-body">
+            <h5 class="card-title w3-text-black">Jadibuti Junction</h5>
+            <p class="card-text">Jump to the Jadibuti Junction</p>
+            <a href="{{ url_for('jadibuti')}}" class="btn btn-primary">Jadibuti</a>
+          </div>
+       </div>
+    </div>
+    <!-- end for jadibuti -->
+    <div class="w3-col m4 w3-margin-bottom">
+        <div class="card" style="margin-right: 0px;">
+          <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Lokanthali/lokanthali_thumbnail.png')}}" alt="Lokanthali Chwok">
+          <div class="card-body">
+            <h5 class="card-title w3-text-black">Lokanthali Junction</h5>
+            <p class="card-text">Jump to Lokanthali Junction</p>
+            <a href="{{ url_for('lokanthali')}}" class="btn btn-primary">Lokanthali</a>
+          </div>
+        </div>
+    </div>
+      <!-- end for lokanthali -->
+  </div>
+  </div>
+{% endblock content %}
+
+
+
+
+
+
+
+

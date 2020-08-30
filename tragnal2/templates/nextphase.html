@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+    {% block heading %}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+<div class="row">
+  <div class="col-sm-12">
+      <center>
+          <h3>Click on Junction You want to See!</h3>
+      </center>
+      <div class="table-responsive-sm">
+          <table class="table text-center">
+              <tbody>
+                <tr>
+                  <td>
+                      <div class="card" style="margin-right: 0px;">
+                          <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Koteshwor/koteshwor_thumbnail.png')}}" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Koteshwor Junction</h5>
+                            <p class="card-text">Jump to Koteshwor Junction</p>
+                            <a href="{{ url_for('koteshwor')}}" class="btn btn-primary">Koteshwor</a>
+                          </div>
+                    </div>
+                  </td>
+                <td>
+                    <div class="card" style="margin-right: 0px;">
+                          <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Jadibuti/jadibuti_thumbnail.png')}}" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Jadibuti Junction</h5>
+                            <p class="card-text">Jump to the Jadibuti Junction</p>
+                            <a href="{{ url_for('jadibuti')}}" class="btn btn-primary">Jadibuti</a>
+                          </div>
+                    </div>
+                </td>
+                    <td>
+                        <div class="card" style="margin-right: 0px;">
+                          <img class="card-img-top" src="{{url_for('static', filename='images/junctions/Lokanthali/lokanthali_thumbnail.png')}}" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Lokanthali Junction</h5>
+                            <p class="card-text">Jump to Lokanthali Junction</p>
+                            <a href="{{ url_for('koteshwor')}}" class="btn btn-primary">Lokanthali</a>
+                          </div>
+                    </div>
+                    </td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+</div>
+
+{% endblock content %}
+
+

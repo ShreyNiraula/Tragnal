@@ -1,0 +1,103 @@
+{% extends "w3_base.html" %}
+
+{% block heading %}
+	<!-- just put jquery script although loaded from base.html in body part, without this, count down doesnot work-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- src for chart.js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+{% endblock %}
+
+{% block content %}
+<!-- css style for map-image and buttons -->
+<style>
+	.w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
+    color: #000!important;
+        background-color: transparent!important;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #343a40e0;
+
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .2rem;
+}
+</style>
+
+<!-- timing JS -->
+<script>{% include 'js/signal_lokanthali.js' %}</script>
+
+ <div class="w3-row-padding " style="margin-top: 1em;">
+ 	<div class="w3-col m8 w3-margin-bottom">
+ 		<div class="w3-light-grey">
+         <img id="jphase" src="{{url_for('static', filename='images/junctions/junc.png')}}" style="width:100%;">
+	        <div class="w3-container">
+	          <h3 style="color:wheat;">Lokanthali Junction</h3>
+	        </div>
+       </div>
+   </div>
+   <div class="w3-col m4 w3-margin-bottom">
+	   <div class="row m4">
+		   <div class="w3-light-grey">
+	        <div class="w3-container">
+	          <div class="card">
+              	<div class="card-body">
+					<center><h3 style="color:#ADFF2F;">Phase Time Counter</h3></center>
+                	<center><h2 class="card-title" id="counter1" style="color:wheat;">Count Down</h2></center>
+					<hr style="color:white;">
+					<br>
+					<center>
+						<h3 style="color:#339955;">Current Phase </h3>
+						<h2 class="card-title" id="phase_number" style="color:wheat;">Next Phase</h2>
+					</center>
+              	</div>
+				 <center><h5 style="color:white;">Jump to Next Phase</h5>
+					 <button id="nextphasebutton" type="button" class="btn btn-primary btn-lg">Next</button>
+				 </center>
+        	  </div>
+			</div>
+		</div>
+   </div>
+   <!--<div class="row m8">-->
+	   <!--<div class="container">-->
+        <!--<h4>Ip Camera Livestream</h4>-->
+        <!--<img height="250" width="442" src="{{ url_for('video_feed') }}">-->
+      <!--</div>-->
+   <!--</div>-->
+ </div>
+ </div>
+
+<div class="row">
+	 <!-- chart here-->
+	<div class="col m6">
+		<center><h3>Traffic Volume Chart in a Day</h3></center>
+	 	<center><p id="caption">Chart shows average traffic volume 8 AM to 8 PM in Lokanthali</p></center>
+
+		<!-- line chart canvas element -->
+		<canvas id="myLineGraph" width="600" height="400" style="
+    												display: block;
+    												max-height: 400px;
+    												max-width: 600px;">
+		</canvas>
+	</div>
+	<div class="col m6">
+		<center><h3>Traffic Volume Chart during a week</h3></center>
+	 	<center><p>Bar graph represents the maximum traffic volume day wise</p></center>
+		<!-- line chart canvas element -->
+		<canvas id="myBarGraph" width="600" height="400" style="
+    												display: block;
+    												max-height: 400px;
+    												max-width: 600px;">
+		</canvas>
+	</div>
+  </div>
+
+<!--<button id='swapbutton' class="btn btn-primary">Press to swap graph</button>-->
+<script>{% include 'js/graph_lok.js' %}</script>
+{% endblock content %}

@@ -1,0 +1,57 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 4rem;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background: url("../images/background/login.png") no-repeat center center fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-section {
+    background-color: rgba(0,0,0,0.5) !important;
+    background: #ffffff;
+
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 25em;
+    position: relative;
+    left: 30em;
+    top: 10em;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: wheat !important;
+
+
+}
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: #e2e63c;
+    white-space: normal;
+}
+
+.btn-outline-info {
+    color: #b4b817;
+    background-color: transparent;
+    background-image: none;
+    border-color: #61b817;
+}
+.alert-info {
+    color: #0c5460;
+    background-color: #4950577d;
+    border-color: #bee5eb;
+}
